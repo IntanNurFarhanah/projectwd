@@ -74,7 +74,7 @@
                            <li>
                               <button type="button" data-toggle="modal" data-target="#exampleModal"> <span class="far fa-user"></span></button>
                            </li>
-                           <li class="chocscart choccart2 cart cart box_1">
+                           <li class="choccart choccart2 cart cart box_1">
                               <form action="#" method="post" class="last">
                                  <input type="hidden" name="cmd" value="_cart">
                                  <input type="hidden" name="display" value="1">
@@ -326,9 +326,9 @@
       <!-- cart-js -->	
       <script src="js/minicart.js"></script>
       <script>
-         chocletto.render();
+         choc.render();
          
-         chocletto.cart.on('chocletto_checkout', function (evt) {
+         choc.cart.on('choc_checkout', function (evt) {
          	var items, len, i;
          
          	if (this.subtotal() > 0) {

@@ -1791,13 +1791,13 @@ Cart.prototype.save = function save() {
 
 
 /**
- * Proxies the chocletto_checkout event
+ * Proxies the choc_checkout event
  * The assumption is the view triggers this and consumers subscribe to it
  *
  * @param {object} The initiating event
  */
-Cart.prototype.chocletto_checkout = function chocletto_checkout(evt) {
-    this.fire('chocletto_checkout', evt);
+Cart.prototype.choc_checkout = function choc_checkout(evt) {
+    this.fire('choc_checkout', evt);
 };
 
 
@@ -2729,9 +2729,9 @@ function View(model) {
  * Tells the view to redraw
  */
 View.prototype.redraw = function redraw() {
-    events.remove(this.el.querySelector('form'), 'submit', this.model.cart.chocletto_checkout, this.model.cart);
+    events.remove(this.el.querySelector('form'), 'submit', this.model.cart.choc_checkout, this.model.cart);
     this.el.innerHTML = template(config.template, this.model);
-    events.add(this.el.querySelector('form'), 'submit', this.model.cart.chocletto_checkout, this.model.cart);
+    events.add(this.el.querySelector('form'), 'submit', this.model.cart.choc_checkout, this.model.cart);
 };
 
 
